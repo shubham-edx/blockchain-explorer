@@ -8,6 +8,7 @@ import swaggerUi from 'swagger-ui-express';
 import compression from 'compression';
 import passport from 'passport';
 import RateLimit from 'express-rate-limit';
+import cors from 'cors';
 import { PlatformBuilder } from './platform/PlatformBuilder';
 import explorerconfig from './explorerconfig.json';
 import { PersistenceFactory } from './persistence/PersistenceFactory';
@@ -52,6 +53,8 @@ export class Explorer {
 				extended: true
 			})
 		);
+
+		this.app.use(cors());
 
 		// eslint-disable-next-line spellcheck/spell-checker
 		// handle rate limit, see https://lgtm.com/rules/1506065727959/
