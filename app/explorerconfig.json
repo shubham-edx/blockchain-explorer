@@ -15,6 +15,6 @@
 	},
 	"jwt": {
 		"secret": "a secret phrase!!",
-		"expiresIn": "345d"
+		"expiresIn": "365d"
 	}
 }
